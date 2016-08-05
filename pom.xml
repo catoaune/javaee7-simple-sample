@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.javaee7.sample</groupId>
     <artifactId>javaee7-simple-sample</artifactId>
-    <version>1.11-SNAPSHOT</version>
+    <version>1.13-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>javaee7-simple-sample</name>
     <properties>
@@ -18,10 +18,10 @@
         </dependency>
     </dependencies>
     <scm>
-        <connection>scm:git:https://github.com/javaee-samples/javaee7-simple-sample.git</connection>
-        <url>https://github.com/javaee-samples/javaee7-simple-sample.git</url>
-        <developerConnection>scm:git:https://github.com/javaee-samples/javaee7-simple-sample.git</developerConnection>
-        <tag>v1.5</tag>
+        <connection>scm:git:file://localhost/c:/Users/admdeploy/tmp/javaee7-simple-sample/javaee7-simple-sample.git</connection>
+        <url>file://localhost/c:/Users/admdeploy/tmp/javaee7-simple-sample/javaee7-simple-sample.git</url>
+        <developerConnection>scm:git:file://localhost/c:/Users/admdeploy/tmp/javaee7-simple-sample/javaee7-simple-sample.git</developerConnection>
+        <tag>v1.12</tag>
     </scm>
     <developers>
         <developer>
@@ -31,14 +31,14 @@
     </developers>
     <distributionManagement>
         <repository>
-            <id>deployment</id>
-            <name>Internal Releases</name>
-            <url>http://localhost:8081/nexus/content/repositories/releases/</url>
+            <id>nexus</id>
+            <name>Releases</name>
+            <url>http://localhost:8081/repository/maven-releases</url>
         </repository>
         <snapshotRepository>
-            <id>deployment</id>
-            <name>Internal Snapshot Releases</name>
-            <url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
+            <id>nexus</id>
+            <name>Snapshots</name>
+            <url>http://localhost:8081/repository/maven-snapshots</url>
         </snapshotRepository>
     </distributionManagement>
     <build>
@@ -62,7 +62,7 @@
                 </plugin>
                 <plugin>
                     <artifactId>maven-release-plugin</artifactId>
-                    <version>2.5.1</version>
+                    <version>2.5.2</version>
                     <configuration>
                         <tagNameFormat>v@{project.version}</tagNameFormat>
                         <autoVersionSubmodules>true</autoVersionSubmodules>
